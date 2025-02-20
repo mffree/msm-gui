@@ -2,6 +2,48 @@
   Director #<%= @the_director.id %> details
 </h1>
 
+<div>
+  <a href="/directors">Go back</a>
+</div>
+
+<div>
+  <a href="/directors/delete_director/<%= @the_director.id %>">Delete director</a>
+</div>
+
+
+<!--ADD DELETE DIRECTOR BUTTON-->
+
+<!--Form for updating the director-->
+<hr>
+
+<form action="/directors/update_director/<%= @the_director.id %>" method="post"> <!--This action must match the route I create for updating the database-->
+  <div>
+  <label for="director_name_input">Name</label>
+  <input id="director_name_input" name="director_name" type="text" value="<%=@the_director.name%>">
+  </div>
+
+  <div>
+  <label for="director_dob_input">Dob</label>
+  <input id="director_dob_input" name="director_dob" type="date" value="<%=@the_director.dob%>">
+  </div>
+
+  <div>
+  <label for="director_bio_input">Bio</label>
+  <textarea id="director_bio_input" name="director_bio" rows="3"> <%=@the_director.bio%></textarea>
+  </div>
+
+  <div>
+  <label for="director_image_input">Image</label>
+  <input id="director_image_input" name="director_image" type="text" value="<%=@the_director.image%>">
+  </div>
+
+  <button>Update director</button>
+</form>
+
+<hr>
+
+<!--Director details-->
+
 <a href="/directors">
   Go back
 </a>

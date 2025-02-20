@@ -2,6 +2,34 @@
   List of all directors
 </h1>
 
+<!--Form for adding new directors-->
+<hr>
+
+<form action="/directors/insert_director" method="post"> <!--This action must match the route I create for updating the database-->
+  <div>
+  <label for="director_name_input">Name</label>
+  <input id="director_name_input" name="director_name" type="text">
+  </div>
+
+  <div>
+  <label for="director_dob_input">Dob</label>
+  <input id="director_dob_input" name="director_dob" type="date">
+  </div>
+
+  <div>
+  <label for="director_bio_input">Bio</label>
+  <textarea id="director_bio_input" name="director_bio" rows="3"></textarea>
+  </div>
+
+  <div>
+  <label for="director_image_input">Image</label>
+  <input id="director_image_input" name="director_image" type="text">
+  </div>
+
+  <button>Create director</button>
+</form>
+
+<!--Table of all directors-->
 <hr>
 
 <table border="1">
