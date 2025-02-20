@@ -4,6 +4,47 @@
 
 <hr>
 
+<!--Form for adding new movies--> COMMENT THIS OUT AND FOLLOW HIS VIDEO EXACTLY!!!!!!!!!!!!!!!!!
+<hr>
+
+<form action="/movies/insert_movie" method="post"> <!--This action must match the route I create for updating the database-->
+  <div>
+  <label for="movie_title_input">Name</label>
+  <input id="movie_title_input" name="movie_title" type="text">
+  </div>
+
+  <div>
+  <label for="movie_year_input">Dob</label>
+  <input id="movie_year_input" name="movie_year" type="text">
+  </div>
+
+  <div>
+  <label for="movie_duration_input">Dob</label>
+  <input id="movie_duration_input" name="movie_duration" type="text">
+  </div>
+
+  <div>
+  <label for="movie_description_input">Bio</label>
+  <textarea id="movie_description_input" name="movie_description" rows="3"></textarea>
+  </div>
+
+  <div>
+  <label for="movie_image_input">Image</label>
+  <input id="movie_image_input" name="movie_image" type="text">
+  </div>
+
+  <div>
+  <label for="director_id_input">Image</label>
+  <input id="director_id_input" name="director_id" type="text">
+  </div>
+
+
+  <button>Create movie</button>
+</form>
+
+
+<hr>
+
 <table border="1">
   <tr>
     <th>
