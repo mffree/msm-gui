@@ -4,38 +4,38 @@
 
 <hr>
 
-<!--Form for adding new movies--> COMMENT THIS OUT AND FOLLOW HIS VIDEO EXACTLY!!!!!!!!!!!!!!!!!
+<!--Form for adding new movies-->
 <hr>
 
-<form action="/movies/insert_movie" method="post"> <!--This action must match the route I create for updating the database-->
+<form action="/insert_movie_record" method="post"> <!--This action must match the route I create for updating the database-->
   <div>
-  <label for="movie_title_input">Name</label>
-  <input id="movie_title_input" name="movie_title" type="text">
+  <label for="title_field">Title</label>
+  <input id="title_field" name="the_title" type="text">
   </div>
 
   <div>
-  <label for="movie_year_input">Dob</label>
-  <input id="movie_year_input" name="movie_year" type="text">
+  <label for="year_field">Year</label>
+  <input id="year_field" name="the_year" type="text">
   </div>
 
   <div>
-  <label for="movie_duration_input">Dob</label>
-  <input id="movie_duration_input" name="movie_duration" type="text">
+  <label for="duration_field">Duration</label>
+  <input id="duration_field" name="the_duration" type="text">
   </div>
 
   <div>
-  <label for="movie_description_input">Bio</label>
-  <textarea id="movie_description_input" name="movie_description" rows="3"></textarea>
+  <label for="description_field">Description</label>
+  <textarea id="description_field" name="the_description" rows="3"></textarea>
   </div>
 
   <div>
-  <label for="movie_image_input">Image</label>
-  <input id="movie_image_input" name="movie_image" type="text">
+  <label for="image_field">Image</label>
+  <input id="image_field" name="the_image" type="text">
   </div>
 
   <div>
-  <label for="director_id_input">Image</label>
-  <input id="director_id_input" name="director_id" type="text">
+  <label for="director_id_field">Director ID</label>
+  <input id="director_id_field" name="the_director_id" type="text">
   </div>
 
 
@@ -94,7 +94,11 @@
       
       <% the_director = matching_directors.at(0) %>
 
-      <%= the_director.name %>
+      <% if the_director == nil %>
+        Uh oh! We weren't able to find a director for this movie.
+      <% else %>
+        <%= the_director.name %>
+      <% end %>
     </td>
 
     <td>
