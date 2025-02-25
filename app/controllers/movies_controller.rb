@@ -28,18 +28,20 @@ class MoviesController < ApplicationController
     redirect_to("/movies")
   end
 
-  # def updating_director # updating director
-  #   director_id = params.fetch("path_id")
-  #   d = Director.where({ :id => director_id }).at(0)
-  #   d.name = params.fetch("director_name") # fetching from the form inputs
-  #   d.dob = params.fetch("director_dob")
-  #   d.bio = params.fetch("director_bio")
-  #   d.image = params.fetch("director_image")
-  #   d.save
+  def update # updating movie
+    movie_id = params.fetch("path_id")
+    m = Movie.where({ :id => movie_id }).at(0)
+    m.title = params.fetch("the_title") # fetching from the form inputs
+    m.year = params.fetch("the_year")
+    m.duration = params.fetch("the_duration")
+    m.description = params.fetch("the_description")
+    m.image = params.fetch("the_image")
+    m.director_id = params.fetch("the_director_id")
+    m.save
 
-  #   redirect_to("/directors/#{director_id}")
+    redirect_to("/movies/#{movie_id}")
 
-  # end
+  end
 
 
   def destroy # {"path_id"=>"72"}
