@@ -6,6 +6,43 @@
   Go back
 </a>
 
+<!--Delete actor button-->
+<div>
+  <a href="/delete_actor/<%= @the_actor.id %>">Delete actor</a>
+</div>
+
+
+
+<!--Form for updating the actor-->
+<hr>
+
+<form action="/modify_actor_record/<%= @the_actor.id %>" method="post"> <!--This action must match the route I create for updating the database-->
+  <div>
+  <label for="name_field">Name</label>
+  <input id="name_field" name="the_name" type="text" value="<%=@the_actor.name%>">
+  </div>
+
+  <div>
+  <label for="dob_field">Dob</label>
+  <input id="dob_field" name="the_dob" type="date" value="<%=@the_actor.dob%>">
+  </div>
+
+  <div>
+  <label for="bio_field">Bio</label>
+  <textarea id="bio_field" name="the_bio" rows="3"><%=@the_actor.bio%></textarea>
+  </div>
+
+  <div>
+  <label for="image_field">Image</label>
+  <input id="image_field" name="the_image" type="text" value="<%=@the_actor.image%>">
+  </div>
+
+  <button>Update actor</button>
+</form>
+</form>
+
+
+
 <hr>
 
 <dl>

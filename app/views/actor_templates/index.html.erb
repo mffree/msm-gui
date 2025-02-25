@@ -4,6 +4,35 @@
 
 <hr>
 
+<!--Form for adding new actors-->
+<hr>
+
+<form action="/insert_actor_record" method="post"> <!--This action must match the route I create for updating the database-->
+  <div>
+  <label for="name_field">Name</label>
+  <input id="name_field" name="the_name" type="text">
+  </div>
+
+  <div>
+  <label for="dob_field">Dob</label>
+  <input id="dob_field" name="the_dob" type="date">
+  </div>
+
+  <div>
+  <label for="bio_field">Bio</label>
+  <textarea id="bio_field" name="the_bio" rows="3"></textarea>
+  </div>
+
+  <div>
+  <label for="image_field">Image</label>
+  <input id="image_field" name="the_image" type="text">
+  </div>
+
+  <button>Create actor</button>
+</form>
+
+<hr>
+
 <table border="1">
   <tr>
     <th>
