@@ -71,5 +71,6 @@ class DirectorsController < ApplicationController
     redirect_to("/directors")
   end
 
+  
 
 end
